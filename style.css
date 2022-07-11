@@ -1,0 +1,44 @@
+html,
+body {
+    height: 100%;
+    font-style: italic;
+}
+
+.nav-bar{
+    font-style: oblique;
+}
+
+
+.text_box {
+    margin-right: 5%;
+    margin-left: 5%;
+    font-style: normal;
+    width: 50%;
+    height: 100%;
+    border: 1px solid lightgray !important;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+.fileform{
+    display: flex;
+    justify-content: center;
+    padding-left: 10%;
+}
+#container{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    margin: 0 auto;
+}
+
+.center_buttons{
+    margin:auto;
+    display:block;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-evenly;
+}
+

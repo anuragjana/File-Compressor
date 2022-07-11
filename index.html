@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap" rel="stylesheet">
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>File Compressor</title>
+</head>
+<body>
+
+
+
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                Huffman File Compressor
+            </a>
+          </nav>
+        <div id="container">
+            <!-- <div class="text_box" style="overflow-y: scroll">
+                <span id="box1" style="width: 100%; text-align: center; font-size: medium;">
+                    Your text will be displayed here!!
+
+                </span>
+            </div> -->
+            <div class="text_box" style="overflow-y: scroll">
+                <span id="box1" style="width: 100%; text-align: center; font-size: medium">
+                    Text after processing will be displayed here!!
+                </span>
+            </div>
+            <div class="text_box" style="overflow-y: scroll">
+                <span id="box2" style="width: 100%; text-align: center; font-size: medium">
+                    Text after processing will be displayed here!!
+                </span>
+            </div>
+        </div>
+
+    <div class="fileform mt-4">
+        <form  method="post" enctype="multipart/form-data" style="display: inline-block;">
+            <input type="file" id="uploadedFile">
+        </form>
+    </div>
+    <div class="buttons">
+        <button type="button" class="btn btn-primary btn-lg mt-3" id="encode">Compress</button>
+        <button type="button" class="btn btn-primary btn-lg mt-3" id="decode">Decompress</button>
+    </div>
+
+
+
+
+    <script src="index.js"></script>
+</body>
+</html>
