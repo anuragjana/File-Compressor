@@ -127,6 +127,8 @@ class Huffman_Encoder_Decoder{
    {
         this.heap = new MinHeap();
         const mp = new Map();
+
+        //Maps each of the character to it's frequency in the text file
         for(let i=0;i<data.length;i++)
         {
             if(data[i] in mp)
@@ -137,12 +139,16 @@ class Huffman_Encoder_Decoder{
             }
         }
 
+
+        //Pushes the element and it's frequencies to the heap
         for(const key in mp)
         {
             this.heap.push([mp[key], key]);
         }
 
-        while(this.heap.size() > 1){
+        //Constructs the huffman tree
+        while(this.heap.size() > 1)
+        {
             const node1 = this.heap.get_min();
             const node2 = this.heap.get_min();
 
@@ -160,6 +166,8 @@ class Huffman_Encoder_Decoder{
         }
 
         let rem = (8 - binary_string.length%8)%8;
+
+        //Adds padding to the text to make the length divisible by 8
         let padding = "";
         for(let i=0;i<rem;i++)
             padding = padding + "0";
