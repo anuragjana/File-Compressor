@@ -85,22 +85,22 @@ class MinHeap {
 
         let left = 2 * index + 1,
             right = 2 * index + 2,
-            largest = index;
+            smallest = index;
         const length = this.size();
-        if (left < length && this.heap[left][0] < this.heap[largest][0]) 
+        if (left < length && this.heap[left][0] < this.heap[smallest][0]) 
         {
-            largest = left
+            smallest = left
         }
-        if (right < length && this.heap[right][0] < this.heap[largest][0]) 
+        if (right < length && this.heap[right][0] < this.heap[smallest][0]) 
         {
-            largest = right
+            smallest = right
         }
-        if (largest !== index) 
+        if (smallest !== index) 
         {
-            let tmp = this.heap[largest];
-            this.heap[largest] = this.heap[index];
+            let tmp = this.heap[smallest];
+            this.heap[smallest] = this.heap[index];
             this.heap[index] = tmp;
-            this.down_heapify(largest)
+            this.down_heapify(smallest)
         }
     }
 
